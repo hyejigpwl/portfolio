@@ -8,7 +8,7 @@
     <meta name="description" content="이혜지의 포트폴리오 랜딩페이지입니다.">
     <meta name="keywords"
         content="웹포트폴리오, 웹퍼블리셔, 웹개발, 백엔드, 프론트엔드, html, css, javascript, jquery, spring boot, java, mysql, oracle, jsp">
-    <meta name="image" content="//www.duranno.com/duplus/img/thanks/thumbnail.png">
+    <meta name="image" content="">
     <!-- 페이스북 -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="이혜지 포트폴리오">
@@ -18,8 +18,7 @@
     <meta property="og:image" content="http://hester0703.dothome.co.kr/">
     <!-- //페이스북 -->
     <title>두플러스 런칭 1주년 감사 이벤트</title>
-    <link rel="icon" href="//www.duranno.com/duplus/img/core/favicon-16x16.png" type="/duranno/image/x-icon">
-    <!-- 파비콘 -->
+    <link rel="icon" href="" type="/duranno/image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- //구글 아이콘폰트 -->
 
     <link rel="stylesheet" href="./css/common.css">
@@ -46,7 +45,8 @@
         <div id='main_img'>
             <div class='layer-bg layer parallax' data-depth='0.10'></div>
             <!-- 텍스트 이미지 -->
-            <div class='layer-1 layer parallax' data-depth='0.40'>Hyeji's<br>Portfolio</div>
+            <div class='layer-1 layer parallax' data-depth='0.40'>Hyeji's<br>Portfolio
+            <p class="main_txt" style="margin-top:15px;">안녕하세요.</p><p class="main_txt">계속해서 성장하고 싶은 백엔드 개발자 이혜지입니다.</p></div>
             <!-- 떠다니는 그림 이미지 -->
             <div class='layer-2 layer parallax' data-depth='0.70'></div>
             <!-- 움직이는 이미지 -->
@@ -65,9 +65,9 @@
                     <ul>
                         <li class="on"><a href="#main_img" class="">About me</a></li>
                         <li><a href="#section_1">Skills</a></li>
-                        <li><a href="#section_2">Archiving</a></li>
-                        <li><a href="#section_3">Projects</a></li>
-                        <li><a href="#section_4">Career</a></li>
+                        <li><a href="#collect_point">Archiving</a></li>
+                        <li><a href="#project_section">Projects</a></li>
+                        
                     </ul>
                 </nav>
             </div>
@@ -99,6 +99,24 @@
           </div>-->
             </section>
             <!-- 이벤트 전체 END -->
+
+            <!-- 팝업 모달 -->
+            <div id="popupModal" class="popup-modal hidden">
+                <div class="popup-content">
+                <span class="close-btn">&times;</span>
+            
+                <!-- 팝업용 슬라이드 -->
+                <div class="swiper popupSwiper">
+                    <div class="swiper-wrapper" id="popupSwiperWrapper">
+                    <!-- JavaScript에서 동적으로 이미지 삽입 -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                </div>
+            </div>
+  
 
             <!-- 여러분과 함께한 시간 START -->
             <section id='section_1'>
@@ -163,9 +181,38 @@
 
                     
                 </div>
+                </section>
 
-               
+               <!-- 포인트가 부족하세요 START -->
+            <section id="collect_point">
+                <div class="w100">
+                    <h2 class="bold ani_fade">ARCHIVING</h2>
+                </div>
 
+                <div class="g_bg_wrap" style="max-width: 900px;
+                margin: 0 auto;">
+                    <div class="swiper mySwiper3">
+                        <div class="swiper-wrapper event_all_wrap">
+                            <a href="https://blog.naver.com/happyyo3977/223338332034"
+                                class="event_1 ani_fade swiper-slide" target="_blank">작업 기록 및 개인 기록용 블로그</a>
+                            <a href="https://www.notion.so/1209-0218-1523c03676bd80378945e79d02ffd9f6"
+                                class="event_2 ani_fade swiper-slide" target="_blank">FITLINK 팀 프로젝트 노션<span class="archiving_date">24.12~25.02</span><span class="archiving_text">회의록, 일정관리, 요구사항명세, 화면설계, 이슈, DB설계</span></a>
+                            <a href="https://drive.google.com/file/d/1Vnvofd9LrGT2VfdsmrwZZJf2VL21LEUg/view?usp=sharing" class="event_3 ani_fade swiper-slide" target="_blank">이니스프리 기획 PDF<span class="archiving_date">22.02~22.07</span><span class="archiving_text">기획, 디자인, 웹 퍼블리싱</span></a>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <!-- 신청 버튼 START -->
+                    <!--<div class="btn_wrap two_btn">
+              <button type="button" class="btn_primary">나의 두플 포인트</button>
+              <button type="button" class="btn_primary" onclick="window.open('https://www.du.plus/mypage/attendance')">출석 체크하기</button>
+            </div>-->
+                    <!-- 신청 버튼 END -->
+                </div>
+            </section>
+            <!-- 포인트가 부족하세요 END -->
+
+            <section id="project_section">
                 <div class="w100">
                     <!-- 가장 사랑한 도서 START -->
                     <div id="love_book" class="sec1_cont">
@@ -175,14 +222,14 @@
                         <div class='who_use layer-bg layer parallax' data-depth='0.00'>
 
                             <dl class="book ani_fade">
-                                <dt>보는 책</dt>
+                                <dt>FITLINK</dt>
                                 <dd><img src="//www.duranno.com/duplus/img/promotion/img_best_book.jpg" alt=""></dd>
                                 <dd class="b_name">더 바이블 플러스 : 신약 1</dd>
                                 <dd class="a_name">두란노 편집부 지음</dd>
                             </dl>
 
                             <dl class="book ani_fade">
-                                <dt>듣는 책</dt>
+                                <dt>PILGRIM</dt>
                                 <dd><img src="//www.duranno.com/duplus/img/promotion/img_best_audiobook.jpg" alt="">
                                 </dd>
                                 <dd class="b_name">먹다 듣다 걷다</dd>
@@ -193,14 +240,14 @@
                             <div class='who_use layer-bg layer parallax' data-depth='0.00'>
 
                                 <dl class="book ani_fade">
-                                    <dt>보는 책</dt>
+                                    <dt>두란노 가정예배</dt>
                                     <dd><img src="//www.duranno.com/duplus/img/promotion/img_best_book.jpg" alt=""></dd>
                                     <dd class="b_name">더 바이블 플러스 : 신약 1</dd>
                                     <dd class="a_name">두란노 편집부 지음</dd>
                                 </dl>
 
                                 <dl class="book ani_fade">
-                                    <dt>듣는 책</dt>
+                                    <dt>생명의삶 표지 공모전</dt>
                                     <dd><img src="//www.duranno.com/duplus/img/promotion/img_best_audiobook.jpg" alt="">
                                     </dd>
                                     <dd class="b_name">먹다 듣다 걷다</dd>
@@ -211,7 +258,7 @@
                                 <div class='who_use layer-bg layer parallax' data-depth='0.00'>
 
                                     <dl class="book ani_fade">
-                                        <dt>보는 책</dt>
+                                        <dt>땡스챌린지</dt>
                                         <dd><img src="//www.duranno.com/duplus/img/promotion/img_best_book.jpg" alt="">
                                         </dd>
                                         <dd class="b_name">더 바이블 플러스 : 신약 1</dd>
@@ -219,7 +266,7 @@
                                     </dl>
 
                                     <dl class="book ani_fade">
-                                        <dt>듣는 책</dt>
+                                        <dt>함께해서 감사해</dt>
                                         <dd><img src="//www.duranno.com/duplus/img/promotion/img_best_audiobook.jpg"
                                                 alt=""></dd>
                                         <dd class="b_name">먹다 듣다 걷다</dd>
@@ -230,7 +277,7 @@
                                     <div class='who_use layer-bg layer parallax' data-depth='0.00'>
 
                                         <dl class="book ani_fade">
-                                            <dt>보는 책</dt>
+                                            <dt>브라이튼 N40 클론코딩</dt>
                                             <dd><img src="//www.duranno.com/duplus/img/promotion/img_best_book.jpg"
                                                     alt=""></dd>
                                             <dd class="b_name">더 바이블 플러스 : 신약 1</dd>
@@ -238,7 +285,7 @@
                                         </dl>
 
                                         <dl class="book ani_fade">
-                                            <dt>듣는 책</dt>
+                                            <dt>카드 짝 맞추기 게임</dt>
                                             <dd><img src="//www.duranno.com/duplus/img/promotion/img_best_audiobook.jpg"
                                                     alt=""></dd>
                                             <dd class="b_name">먹다 듣다 걷다</dd>
@@ -249,7 +296,7 @@
                                         <div class='who_use layer-bg layer parallax' data-depth='0.00'>
 
                                             <dl class="book ani_fade">
-                                                <dt>보는 책</dt>
+                                                <dt>두플여정</dt>
                                                 <dd><img src="//www.duranno.com/duplus/img/promotion/img_best_book.jpg"
                                                         alt=""></dd>
                                                 <dd class="b_name">더 바이블 플러스 : 신약 1</dd>
@@ -257,7 +304,27 @@
                                             </dl>
 
                                             <dl class="book ani_fade">
-                                                <dt>듣는 책</dt>
+                                                <dt>이니스프리</dt>
+                                                <dd><img src="//www.duranno.com/duplus/img/promotion/img_best_audiobook.jpg"
+                                                        alt=""></dd>
+                                                <dd class="b_name">먹다 듣다 걷다</dd>
+                                                <dd class="a_name">이어령 지음</dd>
+                                            </dl>
+
+                                        </div>
+
+                                        <div class='who_use layer-bg layer parallax' data-depth='0.00'>
+
+                                            <dl class="book ani_fade">
+                                                <dt>죠이선교회</dt>
+                                                <dd><img src="//www.duranno.com/duplus/img/promotion/img_best_book.jpg"
+                                                        alt=""></dd>
+                                                <dd class="b_name">더 바이블 플러스 : 신약 1</dd>
+                                                <dd class="a_name">두란노 편집부 지음</dd>
+                                            </dl>
+
+                                            <dl class="book ani_fade">
+                                                <dt>포트폴리오</dt>
                                                 <dd><img src="//www.duranno.com/duplus/img/promotion/img_best_audiobook.jpg"
                                                         alt=""></dd>
                                                 <dd class="b_name">먹다 듣다 걷다</dd>
@@ -273,271 +340,9 @@
             </section>
             <!-- 여러분과 함께한 시간 END -->
 
-            <!-- event1 땡스굿즈 START -->
-            <section id='section_2' class="event_section">
-                <div class="w100">
-                    <h2 class="ani_fade"><img src="//www.duranno.com/duplus/img/promotion/img_event1_title.png"
-                            alt="이벤트1 포인트 모아 땡스 굿즈"></h2>
 
-                    <p class="e_main_txt ani_fade">두플러스 1주년을 기념해 <span class="bold">땡스 굿즈</span>를 제작했어요.<br>앱을 이용할 때 도움이
-                        될 꿀템들을 보내드려요.<br>두플 포인트가 있다면 누구나! 지금 바로 신청하세요!</p>
-
-                    <p class="bold line_g">총 300명, 선착순 마감</p>
-
-                    <!-- 굿즈 슬라이드 START -->
-                    <div class="swiper mySwiper2">
-                        <div class="goods_wrap swiper-wrapper">
-                            <h3 class="blind">굿즈 설명</h3>
-                            <div class="swiper-slide"><img src="//www.duranno.com/duplus/img/promotion/goods_slide1.jpg"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img src="//www.duranno.com/duplus/img/promotion/goods_slide2.jpg"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img src="//www.duranno.com/duplus/img/promotion/goods_slide3.jpg"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img src="//www.duranno.com/duplus/img/promotion/goods_slide4.jpg"
-                                    alt=""></div>
-                            <div class="swiper-slide"><img src="//www.duranno.com/duplus/img/promotion/goods_slide5.jpg"
-                                    alt=""></div>
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                    <!-- 굿즈 슬라이드 END -->
-
-                    <!-- 굿즈 설명 START -->
-                    <div class="goods_info">
-                        <h3 class="blind">굿즈 설명</h3>
-                        <ul>
-                            <li><span><span class="bold">태블릿 거치대</span> | 태블릿을 눈높이에 맞게 두면 편안하게 두플러스를 이용할 수 있어요.</span>
-                            </li>
-                            <li><span><span class="bold">논슬립 패드</span> | 태블릿 거치대 아래 깔아두거나 마우스 패드로도 이용할 수 있어요. (색상
-                                    랜덤)</span></li>
-                            <li><span><span class="bold">종이책</span> | 소장 or 선물하고 싶은 추천 도서 한 권을 보내드려요. (도서 랜덤)</span>
-                            </li>
-                            <li><span><span class="bold">땡큐 카드 1종</span> | 감사의 마음을 전할 때 사용하세요.</span></li>
-                        </ul>
-                    </div>
-                    <!-- 굿즈 설명 END -->
-
-                    <!-- 신청 전 유의사항 START -->
-                    <div class="sign_notice">
-                        <h3 class="line_g">땡스 굿즈 신청하기 전에!</h3>
-                        <ul>
-                            <li>굿즈 신청 시, 보유하신 <span class="bold">두플 포인트 5,000원</span>이 차감됩니다.</li>
-                            <li>땡스 굿즈는 1인 1계정만 신청 가능합니다.</li>
-                            <li>발송 지역은 국내로 제한됩니다. 해외 거주자의 경우 국내 배송지로 대리 수령 가능합니다.</li>
-                            <li>땡스 굿즈 발송은 수시로 진행됩니다. 발송정보를 정확하게 입력해 주시기 바랍니다.</li>
-                        </ul>
-                        <img class="pc" src="//www.duranno.com/duplus/img/promotion/img_event1_notepad1.png" alt="">
-                        <img class="mobile" src="//www.duranno.com/duplus/img/promotion/img_event1_notepad2.png" alt="">
-                    </div>
-                    <!-- 신청 전 유의사항 END -->
-
-                    <!-- 신청 버튼 START -->
-                    <div class="btn_wrap">
-                        <button type="button" class="btn_primary"
-                            onclick="location.href='https://duplus.page.link/xyzmErJkYSqVgSDP6'">땡스 굿즈 신청하기</button>
-                    </div>
-                    <!-- 신청 버튼 END -->
-                </div>
-            </section>
-            <!-- event1 땡스굿즈 END -->
-
-            <!-- 포인트가 부족하세요 START -->
-            <section id="collect_point" class="w100">
-                <div class="w100">
-                    <h2 class="line_g bold ani_fade">잠깐! 포인트가 부족하세요?</h2>
-                </div>
-
-                <div class="g_bg_wrap">
-                    <div class="swiper mySwiper3">
-                        <div class="swiper-wrapper event_all_wrap">
-                            <a href="https://duplus.page.link/TrEpRWAgYLW8EKYX9"
-                                class="event_1 ani_fade swiper-slide"><img
-                                    src="//www.duranno.com/duplus/img/promotion/svg/img_pointbox3.svg"
-                                    alt="5월 출석 체크하기, 출석 체크하고 매일 100원씩 적립하세요! (5월 기간 한정)"></a>
-                            <a href="https://duplus.page.link/VwmB2Q1th3LeA2dy5"
-                                class="event_2 ani_fade swiper-slide"><img
-                                    src="//www.duranno.com/duplus/img/promotion/svg/img_pointbox2.svg"
-                                    alt="두플카드 충전, 두플카드를 충전하면, 10%가 포인트로 적립돼요."></a>
-                            <a href="#none" class="event_3 ani_fade swiper-slide"><img
-                                    src="//www.duranno.com/duplus/img/promotion/svg/img_pointbox1.svg"
-                                    alt="도서 리뷰 작성,한 번에 100원씩, 매일 500원까지 적립할 수 있어요." style="cursor:auto;"></a>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-
-                    <!-- 신청 버튼 START -->
-                    <!--<div class="btn_wrap two_btn">
-              <button type="button" class="btn_primary">나의 두플 포인트</button>
-              <button type="button" class="btn_primary" onclick="window.open('https://www.du.plus/mypage/attendance')">출석 체크하기</button>
-            </div>-->
-                    <!-- 신청 버튼 END -->
-                </div>
-            </section>
-            <!-- 포인트가 부족하세요 END -->
-
-            <!-- event2 땡스 챌린지 START -->
-            <section id='section_3' class="event_section">
-                <div class="w100">
-                    <h2 class="ani_fade"><img src="//www.duranno.com/duplus/img/promotion/img_event2_title.png"
-                            alt="이벤트2 땡스 챌린지"></h2>
-
-                    <p class="e_main_txt ani_fade">감사와 응원의 마음을 담아 <span class="bold">땡큐 카드</span>를 준비했어요.<br>오늘 나에게 힘이 될
-                        응원의 한 문장을 받아보거나<br>​고마운 이들의 이름을 넣어 카드를 전해 보세요!</p>
-
-                    <div class="gift_wrap ani_fade">
-                        <img class="bubble" src="//www.duranno.com/duplus/img/promotion/img_event2_bubble.png"
-                            alt="인스타그램에 인증하고 선물 받자!">
-
-                        <img class="gift" src="//www.duranno.com/duplus/img/promotion/img_event2_gift.png"
-                            alt="뿌링클 10명, 스타벅스 20명, cu 5000원 모바일 금액권 20명">
-                    </div>
-
-                    <!-- 신청 버튼 START -->
-                    <div class="btn_wrap">
-                        <button type="button" class="btn_primary" onclick="window.open('//du.plus/thanks.html')">땡큐 카드
-                            만들기</button>
-                    </div>
-                    <!-- 신청 버튼 END -->
-
-                </div>
-            </section>
-            <!-- event2 땡스 챌린지 START -->
-
-            <!-- 경품 추첨 START -->
-            <section id='section_4' class="event_section">
-                <div class="w100">
-                    <h2 class="ani_fade"><img src="//www.duranno.com/duplus/img/promotion/img_event3_title.png"
-                            alt="1+1 경품 추첨"></h2>
-
-                    <p class="e_main_txt ani_fade">1년 이용권 or 단체 구독을 신청하셨나요?<br>꼭 필요한 <span class="bold">태블릿 PC</span>,
-                        오디오북을 위한 <span class="bold">에어팟</span><br>두플러스가 선물해 드려요!</p>
-
-                    <!-- 굿즈 설명 START -->
-                    <div class="goods_wrap">
-                        <h3 class="blind">굿즈 설명</h3>
-                        <ul>
-                            <li class="ani_fade_goods"><img src="//www.duranno.com/duplus/img/promotion/img_tab.png"
-                                    alt="삼성 갤럭시탭 S7 Wi-Fi 64GB, 1명"></li>
-                            <li class="ani_fade_goods"><img src="//www.duranno.com/duplus/img/promotion/img_airpod.png"
-                                    alt="애플 에어팟 3세대, 2명"></li>
-
-                        </ul>
-                        <p class="g_title pc ani_fade">삼성 갤럭시탭 S7 Wi-Fi 64GB (1명), 애플 에어팟 3세대 (2명)</p>
-                        <p class="g_title mobile ani_fade">삼성 갤럭시탭 S7 Wi-Fi 64GB (1명)<br>애플 에어팟 3세대 (2명)</p>
-
-                        <div class="line_wrap">
-                            <img class="line_1 ani_zoom" src="//www.duranno.com/duplus/img/promotion/img_line1.png"
-                                alt="">
-                            <img class="line_2 ani_zoom" src="//www.duranno.com/duplus/img/promotion/img_line2.png"
-                                alt="">
-                            <img class="line_3 ani_zoom" src="//www.duranno.com/duplus/img/promotion/img_line3.png"
-                                alt="">
-                            <img class="line_4 ani_zoom" src="//www.duranno.com/duplus/img/promotion/img_line4.png"
-                                alt="">
-                        </div>
-
-                    </div>
-                    <!-- 굿즈 설명 END -->
-
-                </div>
-            </section>
-            <!-- 경품 추첨 END -->
-
-            <!-- 감사의 말, 아코디언 START -->
-            <section id="thanks" class="">
-                <!-- 감사의 말 START -->
-                <div class="thanks_letter_wrap">
-                    <div class="thanks_letter">
-                        <h2 class="blind">감사의 말</h2>
-
-                        <img src="//www.duranno.com/duplus/img/promotion/img_title.png" alt="함께해서 감사해">
-                        <p class="pc">두플러스는 여러분이 함께해 주셔서<br>1주년을 맞이할 수 있었고, 더 큰 비전을 갖게 되었습니다.<br>앞으로도 더 편리하게 기능을
-                            개선하고<br>다양한 콘텐츠를 제공하도록 최선을 다하겠습니다.</p>
-
-                        <p class="mobile">두플러스는 여러분이 함께해 주셔서<br>1주년을 맞이할 수 있었고,<br>더 큰 비전을 갖게 되었습니다.<br>앞으로도 더 편리하게 기능을
-                            개선하고<br>다양한 콘텐츠를 제공하도록 최선을 다하겠습니다.</p>
-                        <p class="bold">두플러스 드림</p>
-                    </div>
-                </div>
-                <!-- 감사의 말 END -->
-
-                <!-- 공유 버튼 START -->
-                <div class="w100">
-                    <div class="btn_wrap">
-                        <button type="button" id="urlshare" class="btn_primary"><img
-                                src="//www.duranno.com/duplus/img/promotion/icon_share.svg" alt="">이벤트 공유하기</button>
-                    </div>
-                </div>
-                <!-- 공유 버튼 END -->
-
-                <!-- 아코디언 START -->
-                <div class="menu_acco w100">
-                    <div class="qna1">
-                        <div class="q">
-                            <p>EVENT 1. ‘포인트 모아 땡스 굿즈’ 유의사항</p>
-                            <span class="btn"><img src="//www.duranno.com/duplus/img/promotion/icon_dropdown.svg"
-                                    alt="화살표 이미지"></span>
-                        </div>
-
-                        <ul class="a">
-                            <li>본 이벤트에 수집된 개인정보는 이벤트 상품 발송을 위해서만 사용되며, 이벤트 종료 후 삭제됩니다.</li>
-                            <li>본 이벤트에 참여 하신 분들은 개인정보 수집 및 제 3자 제공에 동의하신 것으로 간주합니다.</li>
-                            <li>1인 1계정으로만 신청 가능하며, 중복 신청이 확인될 경우 취소 및 포인트가 환불됩니다.</li>
-                            <li>경품 발송은 수시로 진행되며, 발송 전 개별 안내(휴대폰 문자)를 드릴 예정입니다.</li>
-                            <li>선착순 신청 기준에 따라 300명 초과 시, 이벤트가 조기 마감될 수 있습니다.</li>
-                        </ul>
-                    </div>
-
-                    <div class="qna2">
-                        <div class="q">
-                            <p>EVENT 2. ‘땡스 챌린지’ 유의사항</p>
-                            <span class="btn"><img src="//www.duranno.com/duplus/img/promotion/icon_dropdown.svg"
-                                    alt="화살표 이미지"></span>
-                        </div>
-
-                        <ul class="a">
-                            <li>인스타그램 비공개 계정은 이벤트 참여가 불가능합니다.</li>
-                            <li>본 이벤트는 인스타그램 계정 하나당 최초 1회만 참여 가능합니다.</li>
-                            <li>스토리 및 피드 업로드 시 24시간 게시물 업로드 유지는 필수 사항입니다.</li>
-                            <li>당첨자에게는 상품 발송 정보 입력을 위한 링크를 인스타그램 DM으로 전송해 드립니다.</li>
-                            <li>당첨자는 일정 기간 회신이 없는 경우 당첨이 취소될 수 있습니다.</li>
-                            <li>경품은 명의 변경, 양도, 유효기간 연장, 교환 및 환불 등이 불가합니다.</li>
-                            <li>수집된 개인정보는 이벤트 상품 발송을 위해서만 사용되며, 이벤트 종료 후 삭제됩니다.</li>
-                        </ul>
-                    </div>
-
-                    <div class="qna3">
-                        <div class="q">
-                            <p>EVENT 3. ‘1+1 경품 추첨’ 유의사항</p>
-                            <span class="btn"><img src="//www.duranno.com/duplus/img/promotion/icon_dropdown.svg"
-                                    alt="화살표 이미지"></span>
-                        </div>
-
-                        <ul class="a">
-                            <li>당첨자 선정 후 상품 발송을 위해 개별 연락드립니다.</li>
-                            <li>경품 발송은 당첨자 발표 이후 2주 이내 발송될 예정입니다.</li>
-                            <li>발송 지역은 국내로 제한되며, 배송 정보 오류로 인한 오배송에 대해 책임지지 않습니다.</li>
-                            <li>당사는 배송 과정에서 발생한 분실 및 파손에 대해 책임지지 않습니다. (CJ대한통운 1588-1255)</li>
-                            <li>수집된 개인정보는 이벤트 상품 발송을 위해서만 사용되며, 이벤트 종료 후 삭제됩니다.</li>
-                        </ul>
-                    </div>
-
-                </div>
-                <!-- 아코디언 END -->
-
-                <!-- 푸터로고 START -->
-                <div class="footer">
-                    <h2><a href="https://www.du.plus/duplus.html"><img
-                                src="//www.duranno.com/duplus/img/promotion/logo.svg" alt="두플러스"></a></h2>
-
-                    <p class="bold">고객센터 : 02-2078-3234</p>
-                </div>
-                <!-- 푸터로고 END -->
-            </section>
-            <!-- 감사의 말, 아코디언 END -->
+         
+      
         </main>
 
     </div>
@@ -632,7 +437,7 @@
                 mySwiper3 = new Swiper(".mySwiper3", {
                     slidesPerView: 1.3,
                     spaceBetween: 20,
-                    centeredSlides: true,
+                    // centeredSlides: true,
 
                     pagination: {
                         el: ".swiper-pagination",
@@ -663,70 +468,57 @@
         });
 
 
-        // 통계 위에 태그 떠다님
-        const tl2 = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#who_use_wrap",
-                start: "top bottom",
-                end: "bottom 40%",
-                scrub: 3.0,
-                // markers:true,
-            }
-        });
+         // 내소개 팝업 이미지
+  const eventData = {
+    event_1: ['./img/me_1.png', './img/me_2.png', './img/me_3.png'],
+    event_2: ['./img/clo_1.png', './img/clo_2.png', './img/movie_1.png', './img/movie_2.png', './img/movie_3.png', './img/movie_5.png'],
+    event_3: ['./img/du_1.png', './img/du_2.png', './img/du_4.png']
+  };
 
-        gsap.utils.toArray("#who_use_wrap .parallax").forEach(layer => {
-            const depth = layer.dataset.depth;
-            const movement = -(layer.offsetHeight * depth)
-            tl2.to(layer, { y: movement, ease: "none" }, 0)
-        });
+  document.querySelectorAll('.event_all_wrap a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const cls = [...this.classList].find(c => c.startsWith('event_'));
+      const images = eventData[cls] || [];
 
+      const wrapper = document.getElementById('popupSwiperWrapper');
+      wrapper.innerHTML = ''; // 기존 슬라이드 비움
 
-        // 사랑한 도서 위에 태그 떠다님
-        const tl3 = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#love_book",
-                start: "top 50%",
-                end: "bottom 40%",
-                scrub: 2.0,
-                // markers:true,
-            }
-        });
+      images.forEach(imgSrc => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        slide.innerHTML = `<img src="${imgSrc}" alt="">`;
+        wrapper.appendChild(slide);
+      });
 
-        gsap.utils.toArray("#love_book .parallax").forEach(layer => {
-            const depth = layer.dataset.depth;
-            const movement = -(layer.offsetHeight * depth)
-            tl3.to(layer, { y: movement, ease: "none" }, 0)
-        });
+      document.getElementById('popupModal').classList.remove('hidden');
 
-
-        // lenis 부드러운 스크롤
-        /*function smoothScroll(){
-          gsap.registerPlugin(ScrollTrigger);
-  
-          const lenis = new Lenis({
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-            direction: 'vertical', // vertical, horizontal
-            gestureDirection: 'vertical', // vertical, horizontal, both
-            smooth: true,
-            mouseMultiplier: 1,
-            smoothTouch: true,
-            touchMultiplier: 0.9,
-            infinite: false,
-          })
-  
-          function raf(time) {
-              lenis.raf(time)
-              requestAnimationFrame(raf)
-          }
-          requestAnimationFrame(raf);
+      // 슬라이더 재초기화
+      if (window.popupSwiper) {
+        window.popupSwiper.destroy();
+      }
+      window.popupSwiper = new Swiper('.popupSwiper', {
+        loop: false, // fade + loop는 충돌 위험 있음
+        effect: "fade",
+        fadeEffect: { crossFade: true },
+        slidesPerView: 1,
+        centeredSlides: true,
+        // pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
         }
-        
-  
-        // pc 화면일때만 부드러운 스크롤 적용되게
-        if (screen.width > 768) {
-          smoothScroll()
-        }*/
+      });
+    });
+  });
+
+  // 닫기 버튼
+  document.querySelector('.close-btn').addEventListener('click', () => {
+    document.getElementById('popupModal').classList.add('hidden');
+  });
+
+
+    
 
 
         // 헤더 fixed
@@ -756,17 +548,17 @@
         $(window).scroll(function () {
             var height = $(document).scrollTop();
 
-            var A = $("#section_4").offset();
-            var B = $("#section_3").offset();
-            var C = $("#section_2").offset();
+            // var A = $("#section_4").offset();
+            var B = $("#project_section").offset();
+            var C = $("#collect_point").offset();
             var D = $("#section_1").offset();
 
             $("nav ul li").removeClass("on");
 
-            if (height > A.top - 200) {
+            /*if (height > A.top - 200) {
                 $("nav ul li").eq(4).addClass("on");
                 moveNav();
-            } else if (height > B.top - 200) {
+            } else */if (height > B.top - 200) {
                 $("nav ul li").eq(3).addClass("on");
                 moveNav();
             } else if (height > C.top - 200) {
@@ -874,332 +666,11 @@
         };
 
         $(window).on('scroll', aniChecker);
-        // 폭죽 효과
-        $(function () { // document ready
-            $(window).scroll(function () { // scroll event
-                var avg_user = $("#section_1").offset().top - 300;
+        
 
-                if ($(document).scrollTop() > avg_user) {
-                    $(".avg_user .bg").addClass("animation");
-                }
+       
 
-            });
-        });
 
-
-        // 카운트 odometer
-        function count() {
-            setTimeout(function () {
-                const odometer = document.querySelectorAll(".odometer");
-                odometer[0].innerHTML = 15000;
-            }, 10);
-
-            // 고차함수 한번만 실행
-            var _once = function (func) {
-                var flag, result;
-                return function () {
-                    if (flag) { return result };
-                    flag = true;
-                    return result = func.apply(this.argument);
-                }
-            }
-
-            var hi = _once(function () {
-                console.log('hi')
-            });
-        }
-
-
-        // 스크롤 위치에 왔을때, 카운트 시작
-        $(window).scroll(function () {
-            var height = $(document).scrollTop();
-
-            var numCount = $(".txt_wrap").offset();
-
-            switch (true) {
-                case (height > numCount.top - 800): count();
-                    break;
-            };
-
-        });
-
-
-
-        // 스크롤 위치에 왔을때, 차트 시작
-        var check_bar = true;
-        var check_pie = true
-        $(window).scroll(function () {
-            var height = $(document).scrollTop();
-
-            var pie_c = $(".pie_chart").offset();
-            var bar_c = $(".bar_chart").offset();
-
-            if (height > bar_c.top - 500) {
-                if (check_bar) {
-                    $('.bar_chart .ani_fade_bar').addClass('active');
-                    chart();
-                    check_bar = false;
-                }
-
-            } else if (height > pie_c.top - 400) {
-                if (check_pie) {
-                    $('.ani_fade_pie').addClass('active');
-                    pie();
-                    check_pie = false;
-                }
-            }
-        });
-
-        // 차트
-        function pie() {
-            // 원형 차트
-            var ctx1 = document.getElementById('myChart1');
-
-
-            var myChart1 = new Chart(ctx1, {
-                type: 'pie',
-                data: {
-                    datasets: [{
-                        label: 'My First Dataset',
-                        data: [60, 26, 14],
-                        backgroundColor: [
-                            '#FFD110',
-                            '#E4E4E4',
-                            '#F5F5F5'
-                        ],
-
-                        borderColor: [
-                            '#000',
-                        ],
-                        borderWidth: [1, 1, 1],
-                        //hoverBorderWidth: [1,0,0],
-                        //borderAlign: 'inner',
-                        borderJoinStyle: 'round',
-                    }]
-                },
-                options: {
-                    segmentShowStroke: false,
-                    plugins: {
-                        legend: false,
-                        tooltip: false,
-                    },
-                    slices: {
-                        1: {
-                            offset: .5
-                        }
-                    }
-                },
-            });
-
-        }
-
-        function chart() {
-            // 막대 차트
-            var ctx2 = document.getElementById('myChart2');
-
-
-            var myChart2 = new Chart(ctx2, {
-                type: 'bar',
-                data: {
-                    labels: ['18-24', '25-44', '35-44', '45-54', '55-64'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [2, 6, 8, 10, 4],
-                        backgroundColor: [
-                            '#E2E2E2',
-                            '#24BAA7',
-                            '#24BAA7',
-                            '#24BAA7',
-                            '#E2E2E2',
-
-                        ],
-                        borderColor: [
-                            '#333',
-                            '#333',
-                            '#333',
-                            '#333',
-                            '#333',
-
-                        ],
-                        borderWidth: 0,
-                        maxbarThickness: 80,
-                    }]
-                },
-                options: {
-                    scales: {
-
-
-                        x: {
-                            grid: {
-                                display: false,
-
-                            },
-                            ticks: {
-                                font: {
-                                    size: 20,
-                                },
-                                color: '#000',
-                            },
-                            display: false,
-
-                        },
-                        y: {
-                            grid: {
-                                display: false
-                            },
-                            display: false,
-                        },
-                    },
-                    plugins: {
-                        legend: false,
-                        tooltip: false,
-
-                    },
-                },
-
-            });
-        };
-
-
-        // 흘러가는 효과 2 - 무한 롤링
-        $(window).on('load', function () {
-            setFlowBanner();
-        })
-
-        function setFlowBanner() {
-            const $wrap = $('.flow_banner');
-            const $list = $('.flow_banner .list');
-            let wrapWidth = $wrap.width();
-            let listWidth = $list.width();
-            const speed = 100; //1초에 몇픽셀 이동하는지 설정
-
-            //리스트 복제
-            let $clone = $list.clone();
-            $wrap.append($clone);
-            flowBannerAct()
-
-            //배너 실행 함수
-            function flowBannerAct() {
-                //무한 반복을 위해 리스트를 복제 후 배너에 추가
-                if (listWidth < wrapWidth) {
-                    const listCount = Math.ceil(wrapWidth * 2 / listWidth);
-                    for (let i = 2; i < listCount; i++) {
-                        $clone = $clone.clone();
-                        $wrap.append($clone);
-                    }
-                }
-
-                // 계속 애니메이션 작동
-                $wrap.find('.list').css({ 'animation': `${listWidth / speed}s linear infinite flowRolling` });
-            }
-
-
-        }
-
-        // 흘러가는 효과 2 - 무한 롤링 (역방향)
-        $(window).on('load', function () {
-            setFlowBanner2();
-        })
-
-        function setFlowBanner2() {
-            const $wrap2 = $('.flow_banner2');
-            const $list2 = $('.flow_banner2 .list');
-            let wrapWidth2 = $wrap2.width();
-            let listWidth2 = $list2.width();
-            const speed2 = 100; //1초에 몇픽셀 이동하는지 설정
-
-            //리스트 복제
-            let $clone2 = $list2.clone();
-            $wrap2.append($clone2);
-            flowBannerAct2()
-
-            //배너 실행 함수
-            function flowBannerAct2() {
-                //무한 반복을 위해 리스트를 복제 후 배너에 추가
-                if (listWidth2 < wrapWidth2) {
-                    const listCount2 = Math.ceil(wrapWidth2 * 2 / listWidth2);
-                    for (let i = 2; i < listCount2; i++) {
-                        $clone2 = $clone2.clone();
-                        $wrap2.append($clone2);
-                    }
-                }
-
-                // 계속 애니메이션 작동
-                $wrap2.find('.list').css({ 'animation': `${listWidth2 / speed2}s linear infinite flowRolling2` });
-            }
-        }
-
-
-        // qna 아코디언 
-        $(document).ready(function () {
-            $(".menu_acco div .a").hide();
-
-            var tg_ck_num1 = 0;
-            $(".qna1 .q").click(function () {
-                // 슬라이드
-                $(this).next(".a").slideToggle(300);
-                $(this).parent().siblings().find(".a").slideUp(300);
-
-                // 아이콘 전환
-                $(this).find(".btn").toggleClass('on');
-                $(this).parent().siblings().find(".q").find(".btn").removeClass("on");
-            });
-
-            var tg_ck_num2 = 0;
-            $(".qna2 .q").click(function () {
-                // 슬라이드
-                $(this).next(".a").slideToggle(300);
-                $(this).parent().siblings().find(".a").slideUp(300);
-
-                // 아이콘 전환
-                $(this).find(".btn").toggleClass('on');
-                $(this).parent().siblings().find(".q").find(".btn").removeClass("on");
-            });
-
-            var tg_ck_num3 = 0;
-            $(".qna3 .q").click(function () {
-                // 슬라이드
-                $(this).next(".a").slideToggle(300);
-                $(this).parent().siblings().find(".a").slideUp(300);
-
-                // 아이콘 전환
-                $(this).find(".btn").toggleClass('on');
-                $(this).parent().siblings().find(".q").find(".btn").removeClass("on");
-            });
-        });
-
-
-
-        // url 공유
-        var btnShare = document.getElementById("urlshare");
-        btnShare.addEventListener("click", function () {
-
-            var url = '';
-            var textarea = document.createElement("textarea");
-            document.body.appendChild(textarea);
-            url = window.location.href.replace(location.hash, "");
-            textarea.value = url;
-            textarea.select();
-            document.execCommand("copy");
-            document.body.removeChild(textarea);
-            alert("주소가 복사되었습니다. 원하는 곳에 붙여넣기(Ctrl+V)하세요.")
-
-        });
-
-        $(window).ready(function () {
-
-            if ((navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 3) || (navigator.userAgent.match(/iPhone|iPad|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null)) {
-                // window.location.replace('https://mobile.du.plus');
-                window.location.href = 'https://mobile.du.plus/1st_anniversary.html';
-            }
-
-            const agent = navigator.userAgent.toLowerCase();
-            if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) {
-                alert("지원되지 않는 브라우져입니다.\nedge 또는 chrome으로 접속하시기 바랍니다.");
-            }
-
-
-        });
     </script>
 </body>
 

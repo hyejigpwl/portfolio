@@ -90,7 +90,7 @@ html,body{
   #main_img .layer-1 { /*�띿뒪�� �대�吏�*/
     /*background: url(//www.duranno.com/duplus/img/promotion/img_title1.png) center  90px no-repeat;*/
     position: absolute;
-    top: 100%;
+    top: 95%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 70px;
@@ -98,6 +98,13 @@ html,body{
     line-height: 90px;
     font-weight: 700;
     text-align:center;
+  }
+
+  #main_img .layer-1  .main_txt{
+    font-size:20px;
+    font-weight:400;
+    color:#999;
+    line-height:30px;
   }
   
   #main_img .layer-2 { /* �좊떎�덈뒗 洹몃┝ �대�吏� */
@@ -140,9 +147,11 @@ html,body{
     0%{top:10px}
     100%{top:0px}
   }*/
+
   
   /* �ㅻ뜑 */
   header{
+    background-color: #fff;
     position:fixed;
     top:0;
     left:50%;
@@ -263,6 +272,60 @@ html,body{
     text-decoration: underline;
   }
   
+  /* 팝업 이미지 */
+  .popup-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .popup-content {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .popup-content img{
+    width:100%;
+  }
+  
+  .popup-modal.hidden {
+    display: none;
+  }
+
+  .popupSwiper .swiper-wrapper{
+    align-items: center;    
+  }
+  .popupSwiper .swiper-slide {
+    width: 100%;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+    background: url('../img/arrow.png') !important;
+  }
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    background: url('../img/arrow_left.png') !important;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 45px;
+    cursor: pointer;
+    z-index: 20000;
+    color: #fff;
+  }
+  
   
   /* �대깽�� �꾩껜 �뚭컻 */
   #event_all{
@@ -300,11 +363,13 @@ html,body{
   #event_all .g_bg_wrap img{
     border: 2px solid #333;
     width:100%;
-    
+    box-sizing: border-box;
     border-radius: 15px;
+    transition: all 0.3s ease; 
   }
   #event_all .g_bg_wrap img:hover{
-    
+    border:10px solid #333;
+    transform: translateY(-10px);
   }
   #event_all .g_bg_wrap .event_1{
     transition-delay:.3s;
@@ -334,7 +399,7 @@ html,body{
   /* �④퍡�� �쒓컙 */
   #section_1{
     background-color: #fff;
-  
+    padding-bottom:80px;
   }
   
   
@@ -400,27 +465,26 @@ html,body{
   }
   
   /* section 1 怨듯넻 */
-  #section_1 .sec1_cont{
+  #project_section .sec1_cont{
     position:relative;
-    margin-top:140px;
     text-align: center;
   }
-  #section_1 .sec1_cont h3{
+  #project_section .sec1_cont h3{
     font-size:30px;
   }
-  #section_1 .sec1_cont h3 img{
+  #project_section .sec1_cont h3 img{
     width:36px;
     margin-right:12px;
   }
   
-  #section_1 .sec1_cont .who_use{
+  #project_section .sec1_cont .who_use{
     display:flex;
     justify-content: space-between;
     margin-top:50px;
     flex-wrap:wrap;
     /*transition-delay:1s;*/
   }
-  #section_1 .sec1_cont .who_use>dl{
+  #project_section .sec1_cont .who_use>dl{
     width:49%;
     height:426px;
     border:1px solid #333;
@@ -430,7 +494,7 @@ html,body{
     padding:40px;
     box-sizing: border-box;
   }
-  #section_1 .sec1_cont .who_use>dl dt{
+  #project_section .sec1_cont .who_use>dl dt{
     font-size:30px;
     font-weight: 700;
     margin-bottom:30px;
@@ -686,25 +750,25 @@ html,body{
   .skill.docker { background-color: #2496ed; }
   
   /* �щ옉�� �꾩꽌 */
-  #section_1 #love_book .book dd:first-of-type{
+  #project_section #love_book .book dd:first-of-type{
     height:206px;
   }
-  #section_1 #love_book .book img{
+  #project_section #love_book .book img{
     width:140px;
     box-shadow: 0px 0px 10px #0000004D;
     border-radius: 5px;
     border:1px solid #333;
   }
-  #section_1 #love_book .book .b_name{
+  #project_section #love_book .book .b_name{
     margin-top:20px;
     font-weight: 700;
   }
-  #section_1 #love_book .book .a_name{
+  #project_section #love_book .book .a_name{
     margin-top:5px;
     color:#999;
   }
   
-  #section_1 #love_book .layer-1{
+  #project_section #love_book .layer-1{
     background: url(//www.duranno.com/duplus/img/promotion/svg/img_openbook.svg) no-repeat;
     width: 172px;
     height:147px;
@@ -717,11 +781,8 @@ html,body{
     position:relative;
     top:-160px;
   }
-  
-  #section_1 .layer-2{
-   
-  }
-  #section_1 #love_book .who_use>dl{
+
+  #project_section #love_book .who_use>dl{
     background-color: #FFF7E8;
   }
   
@@ -932,8 +993,8 @@ html,body{
   
   /* �ъ씤�멸� 遺�議깊븯�몄슂 */
   #collect_point{
-    background-color: #fff;
-    padding:140px 20px;
+    background-color: #FEE167;
+    padding-bottom:80px;
   }
   #collect_point .swiper-pagination{
     display:none;
@@ -948,7 +1009,13 @@ html,body{
     border:1px solid #333;
   }
   #collect_point .swiper-slide{
-    /*width:auto;*/
+    border: 2px solid #333;
+    width: 100%;
+    border-radius: 15px;
+    height:200px;
+    background-color:#fff;
+    padding:20px;
+    box-sizing:border-box;
   }
   #collect_point .g_bg_wrap .event_all_wrap{  
     /*gap:0 23px;*/
@@ -956,23 +1023,30 @@ html,body{
     justify-content: space-between;
   }
   #collect_point .g_bg_wrap a,#collect_point .g_bg_wrap .ios div{
-    width:31%;
+    /*width:31%;*/
    
-    max-width:285px;
+    /*max-width:285px;*/
     /*margin-right:3.6%;*/
+    transition: all 0.3s ease; 
+    
   }
+#collect_point .g_bg_wrap a:hover,#collect_point .g_bg_wrap .ios div:hover{
+  border:10px solid #333;
+  transform: translateY(-10px) !important;
+}
+
   #collect_point .g_bg_wrap a:last-of-type,#collect_point .g_bg_wrap .ios .event_3{
     margin-right:0 !important;
   }
   #collect_point .g_bg_wrap img{
     width:100%;
   }
-  #collect_point .g_bg_wrap .event_2{
+  /*#collect_point .g_bg_wrap .event_2{
      transition-delay:.3s;
   }
   #collect_point .g_bg_wrap .event_3{
      transition-delay:.6s;
-  }
+  }*/
   
   
   #collect_point .btn_wrap{
@@ -1366,9 +1440,10 @@ html,body{
       height:630px;
     }
     #main_img .layer-1 {
-      background:url(//www.duranno.com/duplus/img/promotion/img_title2.png) no-repeat;
+      /* background:url(//www.duranno.com/duplus/img/promotion/img_title2.png) no-repeat;
       background-size:280px;
-      background-position: center 169px;
+      background-position: center 169px; */
+      top: 90%;
     }
     #main_img .layer-2 {
       background-image: url(//www.duranno.com/duplus/img/promotion/svg/img_titleobject2_all.svg);
@@ -1403,18 +1478,18 @@ html,body{
     }
   
     /* �고듃 �ъ씠利� 30->20 */
-    #section_1 .txt_wrap .grow_txt span.bold,#section_1 .sec1_cont h3,#section_1 .sec1_cont .who_use>dl dt,#section_1 .pie_chart dd.mobile,main section h2{
+    #project_section .txt_wrap .grow_txt span.bold,#project_section . h3,#section_1 . .who_use>dl dt,#section_1 .pie_chart dd.mobile,main section h2{
       font-size:20px;
       line-height:24px;
     }
   
-    #section_1 .txt_wrap .grow_txt span{
+    #project_section .txt_wrap .grow_txt span{
       line-height:30px;
     }
-    #section_1 #who_use_wrap .who_use .percent dd,#section_1 .odometer, #section_1 .odometer_txt{
+    #project_section #who_use_wrap .who_use .percent dd,#project_section .odometer, #section_1 .odometer_txt{
       font-size:38px;
     }
-    #section_1 .pie_chart dd.mobile span,#section_1 .txt_wrap .avg_user h3{
+    #project_section .pie_chart dd.mobile span,#project_section .txt_wrap .avg_user h3{
       font-size:24px;
     }
     .event_section p.e_main_txt,.event_section dl dd,.menu_acco>div>div p,.menu_acco>div .a,#thanks .thanks_letter p{
@@ -1436,10 +1511,13 @@ html,body{
       padding:60px 0px 90px;
     }
     #section_1{
-      padding-top:100px;
+     
     }
-    #section_1 .sec1_cont{
-      margin-top:100px;
+    .skills-table{
+      margin-top:40px;
+    }
+    #project_section .sec1_cont{
+      
     }
     #section_1 #myChart1{
       width:220px !important;
@@ -1449,7 +1527,7 @@ html,body{
       padding:60px 0;
     }
     #collect_point{
-      padding:100px 20px;
+      padding: 0px 20px 80px;
     }
     #section_4{
       padding:100px 0;
@@ -1491,45 +1569,45 @@ html,body{
     #section_1 .txt_wrap .avg_user h3 {
       margin-top:50px;
     }
-    #section_1 .sec1_cont h3 img{
+    #project_section .sec1_cont h3 img{
       width:24px;
       margin-right:6px;
     }
-    #section_1 .sec1_cont .who_use {
+    #project_section .sec1_cont .who_use {
       margin-top:30px;
     }
-    #section_1 .sec1_cont .who_use>dl{
+    #project_section .sec1_cont .who_use>dl{
       height:335px;
       padding:30px;
     }
-    #section_1 #who_use_wrap .who_use>dl.bar{
+    #project_section #who_use_wrap .who_use>dl.bar{
       height:335px;
     }
-    #section_1 .pie_chart dd.mobile{
+    #project_section .pie_chart dd.mobile{
       bottom:107px;
       right:24.5%;
     }
-    #section_1 .pie_chart dd.pc{
+    #project_section .pie_chart dd.pc{
       bottom:194px;
     }
-    #section_1 .pie_chart dd.tablet{
+    #project_section .pie_chart dd.tablet{
       bottom:114px;
     }
-    #section_1 #who_use_wrap .layer-1{
+    #project_section #who_use_wrap .layer-1{
       background: url(//www.duranno.com/duplus/img/promotion/svg/img_gender2.svg) no-repeat;
       background-size:40%;
       margin-top:-549px;
       margin-left:8%;
     }
-    #section_1 #who_use_wrap .who_use .percent dd.man{
+    #project_section #who_use_wrap .who_use .percent dd.man{
       left:21%;
       top:86px;
     }
-    #section_1 #who_use_wrap .who_use .percent dd.woman{
+    #project_section #who_use_wrap .who_use .percent dd.woman{
       left:49%;
       top:201px;
     }
-    #section_1 #who_use_wrap .who_use>dl.bar dt{
+    #project_section #who_use_wrap .who_use>dl.bar dt{
       margin-bottom:47px;
     }
     #section_1 .bar_chart .per_4{
@@ -1579,16 +1657,16 @@ html,body{
       width:90px;
       right:-10px;
     }
-    #section_1 .sec1_cont .who_use>dl dt{
+    #project_section .sec1_cont .who_use>dl dt{
       margin-bottom:20px;
     }
-    #section_1 #love_book .book img{
+    #project_section #love_book .book img{
       width:120px;
     }
-    #section_1 #love_book .book dd:first-of-type{
+    #project_section #love_book .book dd:first-of-type{
       height:176px;
     }
-    #section_1 #love_book .book .b_name{
+    #project_section #love_book .book .b_name{
       margin-top:10px;
     }
   
@@ -1799,11 +1877,12 @@ html,body{
   
     #collect_point .g_bg_wrap a,#collect_point .g_bg_wrap .ios div{
       width:31% !important;
-     
-      max-width:285px;
+    
+      /*max-width:285px;*/
       /*margin-right:3.6%;*/
     }
   }
+
   
   @media screen and (max-width: 760px){
     /* �대�吏� �щ씪�대뱶 */
@@ -1881,27 +1960,27 @@ html,body{
   
   @media screen and (max-width: 660px){
     /* �듦퀎 */
-    #section_1 .sec1_cont .who_use{
+    #project_section .sec1_cont .who_use{
       flex-direction: column;
       flex-wrap:nowrap;
       align-items: center;
       gap:20px 0;
     }
-    #section_1 .sec1_cont .who_use>dl{
+    #project_section .sec1_cont .who_use>dl{
       width:100%;
     }
-    #section_1 #who_use_wrap .who_use>dl.bar{
+    #project_section #who_use_wrap .who_use>dl.bar{
       margin-top:0;
     }
-    #section_1 #who_use_wrap .layer-1{
+    #project_section #who_use_wrap .layer-1{
       margin-left:28%;
       position:relative;
       top:-390px;
     }
-    #section_1 #who_use_wrap .who_use .percent dd.man{
+    #project_section #who_use_wrap .who_use .percent dd.man{
       left:29%;
     }
-    #section_1 .pie_chart dd.mobile{
+    #project_section .pie_chart dd.mobile{
       right:35%;
       bottom:115px;
     }
@@ -1927,15 +2006,15 @@ html,body{
     #section_1 .bar_chart .age_5{
       left:75.3%;
     }
-    #section_1 #love_book{
-      height:840px;
+    #project_section #love_book{
+ 
     }
-    #section_1 #love_book .layer-1{
+    #project_section #love_book .layer-1{
       top:-610px;
       margin-left:-6%;
       transform:rotate(20deg);
     }
-    #section_1 #love_book .layer-2{
+    #project_section #love_book .layer-2{
       top:-280px;
       margin-left:87%;
       transform:rotate(-20deg);
